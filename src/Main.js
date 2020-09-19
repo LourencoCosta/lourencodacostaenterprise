@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import Carousel from 'react-bootstrap/Carousel'
+import React from 'react';
+//import React, { useEffect, useState } from 'react';
+//import Carousel from 'react-bootstrap/Carousel'
 //css
 import './Main.css';
 //js
@@ -15,10 +16,10 @@ import caldos from './assets/caldos.jpg'
 import marmitas from './assets/Marmitoas.jpg'
 import salsinha from './assets/salsinha.jpg'
 import pathy from './assets/pathy.png'
-import berinjela from './assets/berinjela.jpg'
-import bucho from './assets/bucho.jpg'
-import feijoada from './assets/feijoada.jpg'
-import Shimeji from './assets/Shimeji.jpg'
+//import berinjela from './assets/berinjela.jpg'
+//import bucho from './assets/bucho.jpg'
+//import feijoada from './assets/feijoada.jpg'
+//import Shimeji from './assets/Shimeji.jpg'
 
 function Main() {
   const listLogo = []
