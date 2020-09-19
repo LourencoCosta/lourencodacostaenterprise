@@ -2,18 +2,33 @@ import React from 'react'
 
 export default function Menu() {
     return (<nav className="nav-menu">
+
+
+
+
         <ul>
             <li>
-                Inicio
+                Nossa Especialidade
             </li>
             <li>
-                Historico Profissional
+                Galeria
             </li>
             <li>
-                Curriculo
+                Cardápios
+            </li>
+            <li>
+                Encomendas
+            </li>
+            <li>
+                Depoimentos
+            </li>
+            <li>
+                Contatos
             </li>
         </ul>
-
     </nav>
+    
+        
+
     )
 }

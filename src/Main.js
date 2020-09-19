@@ -1,121 +1,100 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
+import Carousel from 'react-bootstrap/Carousel'
+//css
 import './Main.css';
-import Footer from './components/Footer'
+//js
+//import script_slides from './slides.js';
+
+//componentes
 import Menu from './components/Menu'
 import Logo from './components/Logo'
-
- //images of logo
- import s3Logo from './assets/s3.png'
- import cLogo from './assets/C.png'
- import reactLogo from './assets/react.png'
- import javaLogo from './assets/java.png'
- import gitLogo from './assets/Git.png'
- import jsLogo from './assets/JS.png'
- import nodeLogo from './assets/node.png'
- import css3 from './assets/css3.png'
- import html5 from './assets/html5.png'
- import java from './assets/java.png'
- import junit from './assets/junit.png'
- import oracledb from './assets/orcacledb.png'
- import spring from './assets/spring.png'
- import wildfly from './assets/wildfly.png'
+import ControlledCarousel from './components/controlledCarousel'
+//images
+import logoQuitutes from './assets/logo.png'
+import caldos from './assets/caldos.jpg'
+import marmitas from './assets/Marmitoas.jpg'
+import salsinha from './assets/salsinha.jpg'
+import pathy from './assets/pathy.png'
+import berinjela from './assets/berinjela.jpg'
+import bucho from './assets/bucho.jpg'
+import feijoada from './assets/feijoada.jpg'
+import Shimeji from './assets/Shimeji.jpg'
 
 function Main() {
-
   const listLogo = []
   async function chargeLogo() {
-    listLogo.push({ name: 's3Logo', path: s3Logo })
-    listLogo.push({ name: 'cLogo', path: cLogo })
-    listLogo.push({ name: 'reactLogo', path: reactLogo })
-    listLogo.push({ name: 'javaLogo', path: javaLogo })
-    listLogo.push({ name: 'gitLogo', path: gitLogo })
-    listLogo.push({ name: 'jsLogo', path: jsLogo })
-    listLogo.push({ name: 'nodeLogo', path: nodeLogo })
-
-    listLogo.push({ name: 'css3', path: css3 })
-    listLogo.push({ name: 'html5', path: html5 })
-    listLogo.push({ name: 'java', path: java })
-    listLogo.push({ name: 'junit', path: junit })
-    listLogo.push({ name: 'oracledb', path: oracledb })
-    listLogo.push({ name: 'spring', path: spring })
-    listLogo.push({ name: 'wildfly', path: wildfly })
-
+    listLogo.push({ name: 'logoQuitutes', path: logoQuitutes })
+    listLogo.push({ name: 'pathy', path: pathy })
+    listLogo.push({ name: 'caldos', path: caldos })
+    listLogo.push({ name: 'marmitas', path: marmitas })
+    listLogo.push({ name: 'salsinha', path: salsinha })
     console.log(listLogo)
   }
   chargeLogo()
 
 
+
   return (
+
     <div className="container-main">
-      <Menu />
-      <section className="container-body">
-
-        <section> Quem Sou eu </section>
-
-        <p className="description"> Sou técnico em telecomunicações e snalista de sistemas Graduado com 5 anos de experiência na área de desenvolvimento de  sitemas, com passegem por grandes empresas nas áreas fiscais e de telcomunicações</p>
-        <p className="description">Atualmente trabalho como analista de sistemas na Fundação CPqD onde atuo na área de desenvolviemnto de produtos e manutenções corretivas, além de atuar em um empreendimento próprio na área de soluções de software a Lourenco Enterprise, com atuação em território nacional</p>
-
-
-        <div className="jumbotron">
-          <p className="titleExperience">Experiencia com Tecnologias</p>
-          <div>
-            <Logo logoName="reactLogo" listLogo={listLogo}></Logo>
-            <p>React js</p>
-          </div>
-          <div>
-            <Logo logoName="javaLogo" listLogo={listLogo}></Logo>
-            <p>Java</p>
-          </div>
-          <div>
-            <Logo logoName="gitLogo" listLogo={listLogo}></Logo>
-            <p>Git</p>
-          </div>
-          <div>
-            <Logo logoName="wildfly" listLogo={listLogo}></Logo>
-            <p>WildFly</p>
-          </div>
-          <div>
-            <Logo logoName="oracledb" listLogo={listLogo}></Logo>
-            <p>Oracle</p>
-          </div>
-          <div>
-            <Logo logoName="s3Logo" listLogo={listLogo}></Logo>
-            <p>Amazon</p>
-          </div>
-          <div>
-            <Logo logoName="css3" listLogo={listLogo}></Logo>
-            <p>CSS3</p>
-          </div>
-          <div>
-            <Logo logoName="html5" listLogo={listLogo}></Logo>
-            <p>HTML5</p>
-          </div>
-          <div>
-            <Logo logoName="jsLogo" listLogo={listLogo}></Logo>
-            <p>Javascript</p>
-          </div>
-          <div>
-            <Logo logoName="spring" listLogo={listLogo}></Logo>
-
-            <p>Spring Boot</p>
-          </div>
-          <div>
-            <Logo logoName="cLogo" listLogo={listLogo}></Logo>
-            <p>C</p>
-          </div>
-          <div>
-            <Logo logoName="junit" listLogo={listLogo}></Logo>
-            <p>JUnit</p>
-          </div>
-          <div>
-            <Logo logoName="nodeLogo" listLogo={listLogo}></Logo>
-            <p>Node</p>
-          </div>
+      <div className="div-arredondada div-home-menu">
+        <Menu />
+        <div className="logoCentral">
+          <Logo logoName="logoQuitutes" listLogo={listLogo} />
         </div>
-      </section>
+      </div>
 
-      <Footer name="inicial"> </Footer>
+      <div className="div-arredondada div-home-nossa-especilidade">
+        <p className="paragrafo-titulo">Nossa Especialidade</p>
+        <p className="pagrafo-subtitulo">Levar alegria para seu estômago!</p>
+        <div className="div-linha"></div>
+        <p className="paragrafo-texto">
+          Nossa especialidade é levar alegria através da gastronomia afetiva, comidas feitas de acordo com o gosto do cliente para que cada mordida seja como uma experiência divina.
+        </p>
+        <p className="paragrafo-texto">
+          Todos os pratos possuem a assinatura da chef de cozinha Patricia Paula Amancio, que possui graduação em gastronomia e atua atendendo desde bufês para festas diversas (casamentos, aniversários, festa de debutante, confraternizações, etc.), confecção de marmitas low carb feitas sobre encomenda, cuscuz, lasanhas (alface, abobrinha, carne com queijo, etc.), tortas, Nhoques, feijoadas, entre outros pratos.
+        </p>
+        <div className="div-depoimento-pathy">
+          <div className="div-foto-pathy"><Logo logoName="pathy" listLogo={listLogo} /><p className="paragrafo-nome">Chef Patricia Paula Amancio</p></div>
+          <p className="paragrafo-texto paragrafo-depoimento">"Eu amo trabalhar na cozinha, é uma forma de compartilhar amor e afeto."</p>
+        </div>
+      </div>
+
+      <div className="div-arredondada div-home-galeria-tentacao">
+        <p className="paragrafo-titulo">Galeria da Tentação</p>
+        <p className="pagrafo-subtitulo">Atenção: cenas fortes para seu apetite, não recomendamos a visualização caso você esteja com fome!</p>
+        <div className="div-linha"></div>
+
+         <div className="div-controlledCarousel">  <ControlledCarousel/></div>
+       
+      </div>
+
+      <div className="div-arredondada">
+        <p className="paragrafo-titulo">Cardápios</p>
+        <p className="pagrafo-subtitulo">Aqui é onde começa a sua satisfação, confira os nossos pratos disponíveis para encomendas!</p>
+        <div className="div-linha"></div>
+      </div>
+
+      <div className="div-arredondada">
+        <p className="paragrafo-titulo">Depoimentos</p>
+        <p className="pagrafo-subtitulo">Aqui alguns depoimentos de algumas pessoas que já provaram dos nossos serviços|</p>
+        <div className="div-linha"></div>
+      </div>
+
+      <div className="div-arredondada">
+        <p className="paragrafo-titulo">Contato</p>
+        <p className="pagrafo-subtitulo">Entre em contato para mais detalhes.</p>
+        <div className="div-linha"></div>
+      </div>
+
+      <div className="div-arredondada">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+      <div className="div-arredondada">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+
+ 
+
+
     </div>
+
 
   )
 }
