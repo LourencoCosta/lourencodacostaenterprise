@@ -21,16 +21,45 @@
 }
 
 .div-arredondada.div-home-menu{
-    
-    background: url("./assets/Pratos.gif") center center no-repeat fixed;
+  
+    background:#FFB6C1;
     box-shadow: none;
-    height: 20em;
+    height: 15em;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+    font-size: 1.6em;
 }
 
+
+.div-arredondada.div-home-menu p{
+  padding-left: 1em;
+}
+
+.div-arredondada.div-em-construcao{
+  display: flex;
+  flex-direction: column;  
+  background: white;
+  box-shadow: none;
+  height: 6em;
+  align-items: left;
+  justify-content: left;
+}
+.div-arredondada.div-home-menu p{
+  padding-left: 1em;
+}
+
+
+
+.logo-redessociais{
+  display: flex;
+  flex-direction: row;
+}
+
+.logo-redessociais img{
+  width: 2em;
+}
 .logoCentral {
     position: absolute;
 }
