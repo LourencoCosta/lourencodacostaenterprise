@@ -2,10 +2,6 @@ import React from 'react'
 
 export default function Menu() {
     return (<nav className="nav-menu">
-
-
-
-
         <ul>
             <li>
                 Nossa Especialidade
@@ -27,8 +23,5 @@ export default function Menu() {
             </li>
         </ul>
     </nav>
-    
-        
-
     )
 }

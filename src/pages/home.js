@@ -1,34 +1,30 @@
 import React from 'react';
+
 //import React, { useEffect, useState } from 'react';
 //import Carousel from 'react-bootstrap/Carousel'
 //css
-import './Main.css';
+import './home.css';
 //js
 //import script_slides from './slides.js';
+import SimpleReactLightbox from "simple-react-lightbox";
+import MyComponent from "../components/MyComponent";
 
-//componentes
-import Menu from './components/Menu'
-import Logo from './components/Logo'
-import ControlledCarousel from './components/controlledCarousel'
+import Menu from '../components/Menu'
+import Logo from '../components/Logo'
+import Cardapios from '../components/Cardapios'
+
+
 //images
-import logoQuitutes from './assets/logo.png'
-import caldos from './assets/caldos.jpg'
-import marmitas from './assets/Marmitoas.jpg'
-import salsinha from './assets/salsinha.jpg'
-import pathy from './assets/pathy.png'
-//import berinjela from './assets/berinjela.jpg'
-//import bucho from './assets/bucho.jpg'
-//import feijoada from './assets/feijoada.jpg'
-//import Shimeji from './assets/Shimeji.jpg'
+import logoQuitutes from '../assets/logo.png'
+import pathy from '../assets/pathy.png'
 
+//https://www.npmjs.com/package/simple-react-lightbox
+//https://codesandbox.io/s/simple-react-lightboxss-39wrb?fontsize=10
 function Main() {
   const listLogo = []
   async function chargeLogo() {
     listLogo.push({ name: 'logoQuitutes', path: logoQuitutes })
     listLogo.push({ name: 'pathy', path: pathy })
-    listLogo.push({ name: 'caldos', path: caldos })
-    listLogo.push({ name: 'marmitas', path: marmitas })
-    listLogo.push({ name: 'salsinha', path: salsinha })
     console.log(listLogo)
   }
   chargeLogo()
@@ -36,13 +32,14 @@ function Main() {
 
 
   return (
-
     <div className="container-main">
       <div className="div-arredondada div-home-menu">
-        <Menu />
+        <div className="div-menu"><Menu /></div>
         <div className="logoCentral">
           <Logo logoName="logoQuitutes" listLogo={listLogo} />
+
         </div>
+        <p> Nossa Alegria é fazer os seu estomago sorrir</p>
       </div>
 
       <div className="div-arredondada div-home-nossa-especilidade">
@@ -66,14 +63,20 @@ function Main() {
         <p className="pagrafo-subtitulo">Atenção: cenas fortes para seu apetite, não recomendamos a visualização caso você esteja com fome!</p>
         <div className="div-linha"></div>
 
-         <div className="div-controlledCarousel">  <ControlledCarousel/></div>
-       
+        <SimpleReactLightbox>
+          <MyComponent />
+        </SimpleReactLightbox>
+
+
       </div>
 
-      <div className="div-arredondada">
+      <div className="div-arredondada div-cardapios">
         <p className="paragrafo-titulo">Cardápios</p>
         <p className="pagrafo-subtitulo">Aqui é onde começa a sua satisfação, confira os nossos pratos disponíveis para encomendas!</p>
         <div className="div-linha"></div>
+        <SimpleReactLightbox>
+          <Cardapios/>
+        </SimpleReactLightbox>
       </div>
 
       <div className="div-arredondada">
@@ -88,11 +91,15 @@ function Main() {
         <div className="div-linha"></div>
       </div>
 
-      <div className="div-arredondada">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
-      <div className="div-arredondada">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
+      <div className="div-arredondada">
 
- 
+        <div className="App">
 
+        </div>
+
+
+      </div>
+      <div className="div-arredondada">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
 
     </div>
 
