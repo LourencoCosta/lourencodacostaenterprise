@@ -18,6 +18,11 @@ import Cardapios from '../components/Cardapios'
 import logoQuitutes from '../assets/logo.png'
 import pathy from '../assets/pathy.png'
 
+import face_logo from '../assets/face_logo.jpg'
+import logo_whats from '../assets/logo_whats.png'
+import insta_logo from '../assets/insta_logo.png'
+
+
 //https://www.npmjs.com/package/simple-react-lightbox
 //https://codesandbox.io/s/simple-react-lightboxss-39wrb?fontsize=10
 function Main() {
@@ -25,6 +30,10 @@ function Main() {
   async function chargeLogo() {
     listLogo.push({ name: 'logoQuitutes', path: logoQuitutes })
     listLogo.push({ name: 'pathy', path: pathy })
+
+    listLogo.push({ name: 'face_logo', path: face_logo })
+    listLogo.push({ name: 'logo_whats', path: logo_whats })
+    listLogo.push({ name: 'insta_logo', path: insta_logo })
     console.log(listLogo)
   }
   chargeLogo()
@@ -50,7 +59,7 @@ function Main() {
           Nossa especialidade é levar alegria através da gastronomia afetiva, comidas feitas de acordo com o gosto do cliente para que cada mordida seja como uma experiência divina.
         </p>
         <p className="paragrafo-texto">
-          Todos os pratos possuem a assinatura da chef de cozinha Patricia Paula Amancio, que possui graduação em gastronomia e atua atendendo desde bufês para festas diversas (casamentos, aniversários, festa de debutante, confraternizações, etc.), confecção de marmitas low carb feitas sobre encomenda, cuscuz, lasanhas (alface, abobrinha, carne com queijo, etc.), tortas, Nhoques, feijoadas, entre outros pratos.
+          Todos os pratos possuem a assinatura da chef de cozinha Patricia Paula Amancio, que possui graduação em gastronomia e atua atendendo desde buffets para festas diversas (casamentos, aniversários, festa de debutante, confraternizações, etc.), confecção de marmitas low carb feitas sobre encomenda, cuscuz, lasanhas (alface, abobrinha, carne com queijo, etc.), tortas, Nhoques, feijoadas, entre outros pratos.
         </p>
         <div className="div-depoimento-pathy">
           <div className="div-foto-pathy"><Logo logoName="pathy" listLogo={listLogo} /><p className="paragrafo-nome">Chef Patricia Paula Amancio</p></div>
@@ -79,16 +88,22 @@ function Main() {
         </SimpleReactLightbox>
       </div>
 
-      <div className="div-arredondada">
-        <p className="paragrafo-titulo">Depoimentos</p>
-        <p className="pagrafo-subtitulo">Aqui alguns depoimentos de algumas pessoas que já provaram dos nossos serviços|</p>
-        <div className="div-linha"></div>
-      </div>
-
-      <div className="div-arredondada">
+      <div className="div-arredondada div-contato">
         <p className="paragrafo-titulo">Contato</p>
         <p className="pagrafo-subtitulo">Entre em contato para mais detalhes.</p>
         <div className="div-linha"></div>
+        <div className="logo-redessociais">
+          <Logo logoName="face_logo" listLogo={listLogo} />
+          <p>Facebook: </p> <a href="https://www.facebook.com/quitutesdapathy">quitutesdapathy</a>
+        </div>
+        <div className="logo-redessociais">
+          <Logo logoName="insta_logo" listLogo={listLogo} />
+          <p>Instagram: </p> <a href="https://www.instagram.com/quitutesdapathy/">@quitutesdapathy</a>
+        </div>
+        <div className="logo-redessociais">
+          <Logo logoName="logo_whats" listLogo={listLogo} />
+          <p>Whatsapp: </p> <a href="https://bit.ly/quitutesdapathy">98135-5009</a>
+        </div>
       </div>
 
       <div className="div-arredondada">
@@ -99,7 +114,6 @@ function Main() {
 
 
       </div>
-      <div className="div-arredondada">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</div>
 
     </div>
 

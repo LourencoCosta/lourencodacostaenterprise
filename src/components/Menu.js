@@ -13,12 +13,6 @@ export default function Menu() {
                 Cardápios
             </li>
             <li>
-                Encomendas
-            </li>
-            <li>
-                Depoimentos
-            </li>
-            <li>
                 Contatos
             </li>
         </ul>

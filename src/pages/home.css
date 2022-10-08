@@ -201,3 +201,28 @@ p.paragrafo-texto.paragrafo-depoimento{
 .div-arredondada.div-cardapios .pagrafo-subtitulo{
    align-self: start;
 }
+
+.logo-redessociais{
+    display: flex;
+    flex-direction: row;
+    
+  }
+  
+  .logo-redessociais img{
+    width: 2em;
+  }
+  .logoCentral {
+      position: absolute;
+  }
+  
+  .logoCentral img{
+      border-radius: 30px;
+      height: 300px;
+  }
+
+ .div-arredondada.div-contato{
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    width: 100%;
+
+}
